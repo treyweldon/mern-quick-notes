@@ -6,7 +6,12 @@ export default function NoteList({notes}){
     ))
     return (
         <>
+        {noteListItems.length ?
         <ul>{noteListItems}</ul>
+        :
+        <div>No Notes to display</div>
+        }
         </>
     )
 }
+
