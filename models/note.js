@@ -1,3 +1,5 @@
+const { default: mongoose } = require('mongoose');
+
 const Schema = require('mongoose').Schema;
 
 const noteSchema = new Schema({
@@ -8,10 +10,10 @@ const noteSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         required: true
-    }
-    }, {
-        timestamps: true,
-        ref: 'createdAt'
+    },
+    createdAt: {
+        timestamps: true
+    } 
 });
 
-module.exports = noteSchema;
+module.exports = mongoose.model('Note', noteSchema);

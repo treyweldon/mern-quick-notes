@@ -1,11 +1,12 @@
 import { useState } from "react";
 
-export default function NewNote() {
+export default function NewNoteForm({addNote}) {
     const [newNote, setNewNote] = useState("");
 
     function handleAddNote(e){
         e.preventDefault();
         setNewNote("")
+        addNote(newNote)
     }
 
     return (
@@ -17,8 +18,7 @@ export default function NewNote() {
             onChange={(e) => setNewNote(e.target.value)}
             cols="30" rows="5"
             placeholder="Add Note...">
-
-            </textarea>
+        </textarea>
         <br />
         <button type="submit">Add Note</button>
         </form>

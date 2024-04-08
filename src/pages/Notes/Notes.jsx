@@ -1,5 +1,5 @@
 import { useState } from "react";
-import NewNote from  "../../components/NewNote/NewNote";
+import NewNoteForm from  "../../components/NewNoteForm/NewNoteForm";
 import NoteList from "../../components/NoteList/NoteList";
 
 export default function Notes() {
@@ -12,8 +12,8 @@ export default function Notes() {
     
     return (
         <>
-        <h1> Notes </h1>
-        <NewNote addNote={addNote}/>
+        <h1> Notes: </h1>
+        <NewNoteForm addNote={addNote} notes={notes} />
         <br />
         <NoteList notes={notes}/>
         </>
