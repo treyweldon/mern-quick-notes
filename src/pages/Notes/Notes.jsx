@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NewNoteForm from  "../../components/NewNoteForm/NewNoteForm";
 import NoteList from "../../components/NoteList/NoteList";
-import {index, create} from "../../utilities/notes-api"
+import { index, create } from "../../utilities/notes-api"
 
 export default function Notes() {
     const [notes, setNotes] = useState([]);
@@ -24,7 +24,7 @@ export default function Notes() {
         <h1> Notes: </h1>
         <NewNoteForm addNote={addNote} notes={notes} />
         <br />
-        <NoteList notes={notes}/>
+        <NoteList notes={notes} />
         </>
     );
   }

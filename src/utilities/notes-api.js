@@ -7,6 +7,5 @@ export async function index(){
 }
 
 export async function create(note){
-    console.log(note)
     return sendRequest(`${BASE_URL}/new`, 'POST', note)
 }
