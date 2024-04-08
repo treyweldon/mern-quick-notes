@@ -2,7 +2,7 @@ import NoteListItem from "../NoteListItem/NoteListItem"
 
 export default function NoteList({notes}){
     const noteListItems = notes.map((n, idx) => (
-        <NoteListItem note={n} key={idx} index={idx} />
+        <NoteListItem note={n.text} key={idx} index={idx} />
     ))
     return (
         <>

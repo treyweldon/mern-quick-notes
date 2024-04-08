@@ -10,10 +10,9 @@ const noteSchema = new Schema({
     user: {
         type: Schema.Types.ObjectId,
         required: true
-    },
-    createdAt: {
+    }}, {
         timestamps: true
-    } 
-});
+    }
+);
 
 module.exports = mongoose.model('Note', noteSchema);
